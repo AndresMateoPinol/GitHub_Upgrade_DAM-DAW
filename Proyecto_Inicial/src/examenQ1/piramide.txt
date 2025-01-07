@@ -1,0 +1,17 @@
+Datos: 
+    * Un mensaje en pantalla que dice ArithmeticException: / by zero.
+    * Línea de código: int resultado = 10 / 0;
+Información: 
+    * El mensaje de error indica que se intentó dividir por cero, cosa que las matemáticas prohiben.
+    * En Java, intentar dividir entre 0 lanza dicha excepción. 
+Conocimiento: 
+    * Para evitar el error, debemos asegurarnos de no dividir entre 0, por ejemplo, con un condicional:
+    if (divisor!=0){
+        int resultado = 10 / divisor; 
+    }else{
+        System.out.println("No se puede dividir entre 0.");
+    }
+Sabiduría:
+    * Sé que no debemos dividir entre 0 y esto nos recuerda que cuando le pida datos numéricos al usuario
+    debo asegurarme de que dichos datos puedan operar en mi programa sin problema alguno, por ejemplo, me-
+    diante el uso de condicionales como hemos hecho anteriormente.
