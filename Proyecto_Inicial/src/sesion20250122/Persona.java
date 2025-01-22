@@ -6,7 +6,7 @@ package sesion20250122;
  * Incluye atributos, un constructor, métodos de acceso (getters y setters) 
  * y un método para mostrar información.
  * 
- * @author Nosotros
+ *  Nosotr@authoros
  * @version 1.0
  */
 public class Persona {
