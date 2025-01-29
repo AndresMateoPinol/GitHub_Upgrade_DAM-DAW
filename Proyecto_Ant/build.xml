@@ -1,0 +1,28 @@
+<!-- Definimos el proyecto con un nombre y la tarea por defecto (compilar) -->
+<project name="MiProyecto" default="compilar" basedir=".">
+
+    <!-- Definir propiedades reutilizables -->
+    <property name="src" value="src"/>  <!-- Carpeta donde está el código fuente -->
+    <property name="bin" value="build"/> <!-- Carpeta donde se guardarán los archivos compilados -->
+
+    <!-- Tarea para limpiar el directorio de salida antes de compilar -->
+    <target name="limpiar">
+        <delete dir="${bin}"/>  <!-- Borra la carpeta de salida si existe -->
+    </target>
+
+    <!-- Tarea para compilar los archivos .java -->
+    <target name="compilar" depends="limpiar">
+        <mkdir dir="${bin}"/>  <!-- Crea la carpeta de salida si no existe -->
+        <javac srcdir="${src}" destdir="${bin}"/>  <!-- Compila los archivos .java dentro de src/ y guarda los .class en build/ -->
+    </target>
+
+    <!-- Tarea para ejecutar el programa -->
+    <target name="ejecutar" depends="compilar">
+        <java classname="HolaMundo" fork="true">  <!-- Ejecuta la clase HolaMundo -->
+            <classpath>
+                <pathelement path="${bin}"/>  <!-- Especifica que los .class están en la carpeta build/ -->
+            </classpath>
+        </java>
+    </target>
+
+</project>

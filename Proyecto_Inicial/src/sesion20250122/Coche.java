@@ -74,5 +74,8 @@ public class Coche {
         miCoche.setVelocidad(100);
         System.out.println("Mi coche va a "+miCoche.getVelocidad()+"km/h.");
         miCoche.frenar(40);
+
+        Coche otroCoche = new Coche("KIA", "Ceed");
+        System.out.println("Si comparo ambos coches obtengo: "+miCoche.equals(otroCoche));
     }
 }
