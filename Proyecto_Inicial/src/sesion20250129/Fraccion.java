@@ -40,7 +40,7 @@ public class Fraccion {
             this.denominador = denominador;
         }
     }
-
+ 
     /**
      * Constructor que recibe solo el numerador y asume que el denominador es 1.
      * 

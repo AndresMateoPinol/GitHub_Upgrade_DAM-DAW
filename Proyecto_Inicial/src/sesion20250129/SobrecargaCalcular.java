@@ -12,6 +12,9 @@ public class SobrecargaCalcular {
         for (int num : numeros) {
             suma += num;
         }
+        // for (int i = 0; i < numeros.length; i++) {
+        //     suma += numeros[i];
+        // }
         return (double) suma / numeros.length;
     }
 
