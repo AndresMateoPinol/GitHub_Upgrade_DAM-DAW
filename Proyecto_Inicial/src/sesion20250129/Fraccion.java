@@ -6,7 +6,7 @@ package sesion20250129;
  * Si el denominador es negativo, la fracción se normaliza para que el denominador sea siempre positivo.
  * 
  * @author Andrés
- * @version 1.0
+ * @version 1.1
  */
 public class Fraccion {
     private int numerador;
