@@ -1,12 +1,36 @@
 package sesion20250129;
 
+
 /**
- * Clase Fraccion que representa una fracción matemática.
- * Permite la creación y manipulación de fracciones, asegurando la validez del denominador.
- * Si el denominador es negativo, la fracción se normaliza para que el denominador sea siempre positivo.
+ * La clase Fraccion representa una fracción matemática con un numerador y un denominador.
+ * Proporciona métodos para realizar operaciones aritméticas con fracciones, como suma, resta,
+ * multiplicación y división, así como métodos para simplificar la fracción y obtener su representación
+ * en cadena.
+ * 
+ * Ejemplo de uso:
+ * <pre>
+ *     Fraccion f1 = new Fraccion(1, 2); // Crea una fracción 1/2
+ *     Fraccion f2 = new Fraccion(3, 4); // Crea una fracción 3/4
+ *     Fraccion suma = f1.sumar(f2);     // Suma las fracciones: 1/2 + 3/4 = 5/4
+ *     System.out.println(suma);         // Imprime: 5/4
+ * </pre>
+ * 
+ * La clase asegura que el denominador nunca sea cero y normaliza las fracciones para que el denominador
+ * siempre sea positivo.
+ * 
+ * Métodos disponibles:
+ * - Constructores para crear fracciones con diferentes parámetros.
+ * - Métodos getter y setter para numerador y denominador.
+ * - Métodos para sumar, restar, multiplicar y dividir fracciones.
+ * - Método para simplificar la fracción.
+ * - Método toString para obtener la representación en cadena de la fracción.
+ * 
+ * Excepciones:
+ * - IllegalArgumentException: Se lanza si se intenta establecer un denominador igual a cero.
  * 
  * @author Andrés
- * @version 1.1
+ * @version 2.0
+ * @since 2023-10-05
  */
 public class Fraccion {
     private int numerador;
@@ -39,6 +63,7 @@ public class Fraccion {
             this.numerador = numerador;
             this.denominador = denominador;
         }
+        simplificar();
     }
  
     /**
@@ -67,6 +92,7 @@ public class Fraccion {
      */
     public void setNumerador(int numerador) {
         this.numerador = numerador;
+        simplificar();
     }
 
     /**
@@ -95,6 +121,7 @@ public class Fraccion {
         } else {
             this.denominador = denominador;
         }
+        simplificar();
     }
 
     /**
@@ -108,6 +135,79 @@ public class Fraccion {
         return (denominador == 1) ? String.valueOf(numerador) : numerador + "/" + denominador;
     }
 
+    private int calcularMCD(int a, int b){
+        while(b!=0){
+            int temporal = b;
+            b = a % b;
+            a = temporal;
+        }
+        return a;
+    }
+
+    /**
+     * Simplifica la fracción dividiendo numerador y denominador por su máximo común divisor.
+     */
+    /**
+     * Simplifies the fraction by dividing both the numerator and the denominator
+     * by their greatest common divisor (GCD).
+     * This method modifies the fraction in place.
+     */
+    public void simplificar() {
+        int mcd = calcularMCD(Math.abs(this.numerador), Math.abs(this.denominador));
+        this.numerador /= mcd;
+        this.denominador /= mcd;
+    }
+
+    /**
+     * Suma esta fracción con otra fracción dada.
+     *
+     * @param otraFraccion La fracción que se va a sumar a esta fracción.
+     * @return Una nueva fracción que es el resultado de la suma de esta fracción y la fracción dada.
+     */
+    public Fraccion sumar(Fraccion otraFraccion){
+        int nuevoNumerador = this.numerador * otraFraccion.denominador + otraFraccion.numerador * this.denominador;
+        int nuevoDenominador = this.denominador * otraFraccion.denominador;
+        return new Fraccion(nuevoNumerador, nuevoDenominador);
+    }
+
+    /**
+     * Subtracts the given fraction from this fraction.
+     *
+     * @param otraFraccion the fraction to be subtracted
+     * @return a new Fraccion representing the result of the subtraction
+     */
+    public Fraccion restar(Fraccion otraFraccion){
+        int nuevoNumerador = this.numerador * otraFraccion.denominador - otraFraccion.numerador * this.denominador;
+        int nuevoDenominador = this.denominador * otraFraccion.denominador;
+        return new Fraccion(nuevoNumerador, nuevoDenominador);
+    }
+
+    /**
+     * Multiplies this fraction by another fraction.
+     *
+     * @param otraFraccion the fraction to multiply by
+     * @return a new Fraccion object representing the product of the two fractions
+     */
+    public Fraccion multiplicar(Fraccion otraFraccion){
+        int nuevoNumerador = this.numerador * otraFraccion.numerador;
+        int nuevoDenominador = this.denominador * otraFraccion.denominador;
+        return new Fraccion(nuevoNumerador, nuevoDenominador);
+    }
+
+
+    /**
+     * Divides this fraction by another fraction.
+     *
+     * @param otraFraccion the fraction to divide by
+     * @return a new Fraccion representing the result of the division
+     */
+    public Fraccion dividir(Fraccion otraFraccion){
+        int nuevoNumerador = this.numerador * otraFraccion.denominador;
+        int nuevoDenominador = this.denominador * otraFraccion.numerador;
+        return new Fraccion(nuevoNumerador, nuevoDenominador);
+    }
+
+
     /**
      * Método principal para probar la clase Fraccion.
      * 
@@ -116,9 +216,9 @@ public class Fraccion {
     public static void main(String[] args) {
         // Creación de fracciones con diferentes constructores (hacedlo siempre para no meter la pata)
         Fraccion f1 = new Fraccion();
-        Fraccion f2 = new Fraccion(3, 4);
+        Fraccion f2 = new Fraccion(6, 54);
         Fraccion f3 = new Fraccion(5);
-        Fraccion f4 = new Fraccion(-2, -5);
+        Fraccion f4 = new Fraccion(-21, -15);
         Fraccion f5 = new Fraccion(7, -3);
         
         System.out.println("Fracción por defecto: " + f1);
@@ -126,5 +226,7 @@ public class Fraccion {
         System.out.println("Fracción con solo numerador (denominador = 1): " + f3);
         System.out.println("Fracción con numerador y denominador negativos: " + f4);
         System.out.println("Fracción con denominador negativo: " + f5);
+
+        System.out.println("Si sumamos las fracciones "+f2+" y "+f4+" obtenemos "+f2.sumar(f4));
     }
 }
