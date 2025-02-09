@@ -109,9 +109,11 @@ public class Fraccion {
         Fraccion fraccion = new Fraccion();
         Fraccion fraccion2 = new Fraccion(2, 5);
         Fraccion fraccion3 = new Fraccion(6);
+        Fraccion fraccion4 = new Fraccion(3, 0);
 
         System.out.println("Fraccion 1 = " + fraccion.toString());
         System.out.println("Fraccion 2 = " + fraccion2.toString());
         System.out.println("Fraccion 3 = " + fraccion3.toString());
+        System.out.println("Fraccion 4 = " + fraccion4.toString());
     }
 }
