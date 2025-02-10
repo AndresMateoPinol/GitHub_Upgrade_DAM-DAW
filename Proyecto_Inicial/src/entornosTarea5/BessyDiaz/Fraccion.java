@@ -44,7 +44,7 @@ public class Fraccion {
 
     //Un constructor que que no recibe parámetros y asume que el denominador es 1.Inicializa la fracción como 0/1
     public Fraccion(){
-        this.numerador = 0;
+        this.numerador = 0 ;
         this.denominador = 1;
     }
 
