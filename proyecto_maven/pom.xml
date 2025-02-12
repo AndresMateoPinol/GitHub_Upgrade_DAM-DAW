@@ -76,17 +76,17 @@
         </plugin>
       </plugins>
     </pluginManagement>
-      <plugins>
-    <!-- Agregamos aquí el exec-maven-plugin para ejecutar la aplicación -->
-    <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>exec-maven-plugin</artifactId>
-      <version>3.1.0</version>
-      <configuration>
-        <!-- Por si acaso, que la ruta coincida con la ubicación de la clase principal -->
-        <mainClass>com.example.App</mainClass>
-      </configuration>
-    </plugin>
-  </plugins>
+    <plugins>
+      <!-- Agregamos aquí el exec-maven-plugin para ejecutar la aplicación -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <!-- Por si acaso, que la ruta coincida con la ubicación de la clase principal -->
+          <mainClass>com.example.App</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
