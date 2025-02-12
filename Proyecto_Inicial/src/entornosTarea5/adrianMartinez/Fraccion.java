@@ -379,12 +379,13 @@ public class Fraccion {
      * @param args Argumentos de la línea de comandos.
      */
     public static void main(String[] args) {
+        System.out.println("--------------------------------------------------------------");
         System.out.println(" ____  ____    __    ___  ___  ____  _____  _  _  ____  ___ \r\n" + //
                         "( ___)(  _ \\  /__\\  / __)/ __)(_  _)(  _  )( \\( )( ___)/ __)\r\n" + //
                         " )__)  )   / /(__)\\( (__( (__  _)(_  )(_)(  )  (  )__) \\__ \\\r\n" + //
                         "(__)  (_)\\_)(__)(__)\\___)\\___)(____)(_____)(_)\\_)(____)(___/\r\n" + //
                         "                                                            ");
-        System.out.println("----------------------------");
+        System.out.println("--------------------------------------------------------------");
         interaccionPrograma();
         System.out.println("Gracias por utilizar el programa, hasta luego!");
         System.out.println("CERRANDO...");
