@@ -1,11 +1,5 @@
 package sesion20250212;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-
 class Pedido {
     private String nombre;
     private int cantidad;
@@ -60,16 +54,5 @@ class Cliente {
         res += "Total: " + calcularTotal();
         return res;
     }
-
-}
-
-
-
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-public class Ejemplo {
 
 }

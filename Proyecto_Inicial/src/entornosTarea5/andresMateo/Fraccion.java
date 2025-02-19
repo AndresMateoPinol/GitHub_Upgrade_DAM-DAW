@@ -1,4 +1,4 @@
-package entornosTarea5.andresMateo;
+package andresMateo;
 
 /**
  * Clase Fraccion que representa una fracción matemática.

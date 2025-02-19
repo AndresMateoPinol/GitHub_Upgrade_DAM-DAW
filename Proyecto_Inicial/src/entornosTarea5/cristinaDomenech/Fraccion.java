@@ -1,4 +1,4 @@
-package Entregas;
+package cristinaDomenech;
 /*Objetivo:
     Diseñar y documentar la clase Fraccion, incorporando conceptos básicos como atributos, constructores, 
     encapsulación y documentación adecuada.

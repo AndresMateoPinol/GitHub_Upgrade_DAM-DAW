@@ -1,4 +1,4 @@
-package entornosTarea5.julioAlbertoDiaz;
+package julioAlbertoDiaz;
 
     /*
      * 1.Define una clase llamada Fraccion que represente una fracción matemática. La clase debe incluir:

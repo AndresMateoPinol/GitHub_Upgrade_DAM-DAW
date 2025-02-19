@@ -43,12 +43,6 @@ class Programador extends Empleado{
     }
 }
 
-
-
-
-
-
-
 public class Ejemplo1 {
     public static void main(String[] args) {
         Gerente ana = new Gerente("Ana", 5000, "IT");

@@ -1,4 +1,4 @@
-package ProyectoObjeto.src.ClaseFraccion;
+package franciscoLopez;
 
 /**
  * Clase Fraccion que representa una fracción matemática.

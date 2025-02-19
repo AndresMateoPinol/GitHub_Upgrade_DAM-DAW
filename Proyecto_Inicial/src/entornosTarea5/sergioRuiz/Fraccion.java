@@ -1,4 +1,4 @@
-package t2.entregas.entrega06;
+package sergioRuiz;
 
 /**
  * Clase Fracción
