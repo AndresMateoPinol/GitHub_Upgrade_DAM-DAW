@@ -82,5 +82,6 @@ public class Abstractos {
         juan.resumen();
         pedro.resumen();
         pedro.tiempoDeEmpleo();
+        System.out.println(pedro instanceof Empleado);
     }
 }
