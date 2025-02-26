@@ -1,0 +1,5 @@
+com\ejemplo\animales\Animal.class
+com\ejemplo\animales\Cat.class
+com\ejemplo\animales\AnimalShelter.class
+com\ejemplo\animales\Dog.class
+com\ejemplo\animales\AbstractAnimal.class
