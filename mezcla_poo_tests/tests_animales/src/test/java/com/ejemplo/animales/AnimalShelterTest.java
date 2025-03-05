@@ -19,6 +19,7 @@ public class AnimalShelterTest {
 
         assertTrue(sounds.contains("Woof!"));
         assertTrue(sounds.contains("Meow!"));
+        assertFalse(sounds.contains("Glup!"));
 
     }
 }

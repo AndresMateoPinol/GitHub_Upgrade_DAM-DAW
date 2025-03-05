@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.ejemplo.animales.AnimalShelterTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.ejemplo.animales.AnimalShelterTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.023 s <<< FAILURE! - in com.ejemplo.animales.AnimalShelterTest
+testAddAndGetAllSounds  Time elapsed: 0.019 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at com.ejemplo.animales.AnimalShelterTest.testAddAndGetAllSounds(AnimalShelterTest.java:22)
+
