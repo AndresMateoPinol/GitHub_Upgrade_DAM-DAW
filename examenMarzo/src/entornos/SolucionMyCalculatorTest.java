@@ -53,6 +53,12 @@ public class SolucionMyCalculatorTest {
     }
 
     @Test
+    void testDivideWithDecimals() {
+        // División no exacta: dividir dos números que no son divisibles.
+        assertEquals(1, calc.divide(6, 4), "La división (entera) de 6 entre 4 debe ser 1");
+    }
+
+    @Test
     void testDivideByZero() {
         // Caso borde: intentar dividir entre cero debe lanzar ArithmeticException.
         assertThrows(ArithmeticException.class, () -> calc.divide(6, 0), 
